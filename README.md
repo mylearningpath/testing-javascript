@@ -1,19 +1,20 @@
-## About
+## Learning Javascript Testing
 
-Learning TDD with Willian Justen's course.
+This is my repository for learn Javascript Testing. My main source of content was the Udemy couse [JS com TDD na Prática](https://www.udemy.com/js-com-tdd-na-pratica) by Willian Justen's.
 
 ## Testing Tools
 
 - Mocha -> Runner
 - Chai -> Assertion
 - Sinon -> Spy, Stub & Mocks
-- Istanbul (NYC) -> Code Coverage
+- NYC(Istanbul) -> Code Coverage
 
 ## Project Dependencies
 
-- Babel (Transpilling to ES5)
+- Babel
 - ESLint (Standard)
 - Mocha
-- Chai
+- [Chai](http://chaijs.com/)
 - Sinon
-- Istanbul 
+- [nyc](https://github.com/istanbuljs/nyc) 
+- [husky](https://github.com/typicode/husky)
