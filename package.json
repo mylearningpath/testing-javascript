@@ -4,7 +4,8 @@
   "description": "Javascript Library to learn TDD",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --recursive --require babel-register",
+    "watch": "mocha --recursive --require babel-register --reporter min --watch"
   },
   "keywords": [
     "js",
