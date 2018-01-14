@@ -4,9 +4,19 @@
   "description": "Javascript Library to learn TDD",
   "main": "index.js",
   "scripts": {
+    "lint": "./node_modules/.bin/eslint src/**/*.js",
     "test": "mocha --recursive --require babel-register",
-    "watch": "mocha --recursive --require babel-register --reporter min --watch"
+    "test:watch": "mocha --recursive --require babel-register --reporter min --watch",
+    "test:coverage": "nyc npm test",
+    "prepush": "npm run lint && npm run test:coverage"
   },
+  "nyc": {
+    "reporter": ["text", "html"],
+    "exclude": "test/**/*.spec.js",
+    "check-coverage": true,
+    "functions": 80,
+    "lines": 80
+  },    
   "keywords": [
     "js",
     "tdd"
@@ -24,6 +34,8 @@
     "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
-    "mocha": "^4.1.0"
+    "husky": "^0.14.3",
+    "mocha": "^4.1.0",
+    "nyc": "^11.4.1"
   }
 }
